@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1010376188797",
+    "project_id": "gimme-18de9"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010376188797:android:75930a117831bacf",
+        "android_client_info": {
+          "package_name": "app.android.gimme.gimme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010376188797-4s5ugstfsskk2tnfr2gp5bna8usg5583.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.android.gimme.gimme",
+            "certificate_hash": "1A0860B9C7776C1E8578F7BB3DEEB3F984CBC7E6"
+          }
+        },
+        {
+          "client_id": "1010376188797-lhrkd9172ca26hhrkjv4soppp1fr13es.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbz0w1kjyoDsNqHQrqpoHwZs4eWrjxKlU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
