@@ -3,7 +3,8 @@
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
+    <string name="prompt_password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
     <string name="action_register">Register</string>
     <string name="action_sign_in">Sign in</string>
     <string name="action_sign_in_short">Sign in</string>
@@ -14,10 +15,25 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="gimme_food_query_hint">Enter desired food here...</string>
+    <string name="gimme_retail_query_hint">Enter desired items here...</string>
+
     <string name="title_activity_home_screen">HomeScreenActivity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="title_activity_gimme_food">GimmeFoodActivity</string>
+    <string name="title_activity_gimme_retail">GimmeRetailActivity</string>
+    <string name="title_activity_retail_store">RetailStoreActivity</string>
+    <string name="title_activity_added_to_order">AddedToOrderActivity</string>
+    <string name="title_activity_place_order">Map</string>
+    <string name="title_activity_restaurant">RestaurantActivity</string>
+    <string name="facebook_app_id">257446287955209</string>
+    <string name="FacebookActivity"></string>
+    <string name="signed_in_fmt">Signed in as: %s</string>
+    <string name="signed_out">Signed out</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="disconnect">Disconnect</string>
 </resources>

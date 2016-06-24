@@ -32,6 +32,12 @@
             android:layout_gravity="center"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Signed out"/>
+
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -87,7 +93,7 @@
                     android:layout_marginTop="16dp"
                     android:text="@string/action_register"
                     android:textStyle="bold"
-                    android:onClick="registerClicked" />
+                    android:onClick="onClick" />
 
             </LinearLayout>
         <LinearLayout
@@ -96,12 +102,44 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.google.android.gms.common.SignInButton
-                android:id="@+id/sign_in_google_button"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/google_sign_in_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:onClick="onClick"/>
+                <LinearLayout
+                    android:id="@+id/google_sign_out_and_disconnect"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <Button
+                        android:id="@+id/google_sign_out_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/sign_out" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/facebook_login_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.25"
-                android:onClick="googleClicked"/>
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:onClick="onClick"/>
 
         </LinearLayout>
         </LinearLayout>

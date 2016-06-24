@@ -1,5 +1,6 @@
 package app.android.gimme.gimme;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -23,14 +24,14 @@ public class HomeScreenActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        //fab.setOnClickListener(new View.OnClickListener() {
+         //   @Override
+          //  public void onClick(View view) {
+        //        Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+        //                .setAction("Action", null).show();
+          //  }
+        //});
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -40,6 +41,20 @@ public class HomeScreenActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+
+    public void onClick(View view){
+        switch(view.getId()){
+            case (R.id.gimme_food):
+                Intent gimmeFoodIntent = new Intent(getApplicationContext(),GimmeFoodActivity.class);
+                startActivity(gimmeFoodIntent);
+                break;
+            case (R.id.gimme_retail):
+                Intent gimmeRetailIntent = new Intent(getApplicationContext(),GimmeRetailActivity.class);
+                startActivity(gimmeRetailIntent);
+                break;
+        }
     }
 
     @Override

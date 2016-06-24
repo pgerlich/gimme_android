@@ -6,6 +6,14 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +21,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="Gimme" />
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name">
@@ -26,7 +40,48 @@
             android:name=".HomeScreenActivity"
             android:label="@string/title_activity_home_screen"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".RegisterPageActivity"></activity>
+        <activity android:name=".RegisterPageActivity" />
+        <activity
+            android:name=".GimmeFoodActivity"
+            android:label="@string/title_activity_gimme_food"
+            android:parentActivityName=".HomeScreenActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.android.gimme.gimme.HomeScreenActivity" />
+        </activity>
+        <activity
+            android:name=".GimmeRetailActivity"
+            android:label="@string/title_activity_gimme_retail"
+            android:parentActivityName=".HomeScreenActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.android.gimme.gimme.HomeScreenActivity" />
+        </activity>
+        <activity
+            android:name=".RetailStoreActivity"
+            android:label="@string/title_activity_retail_store"
+            android:parentActivityName=".GimmeRetailActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.android.gimme.gimme.GimmeRetailActivity" />
+        </activity>
+        <activity
+            android:name=".AddedToOrderActivity"
+            android:label="@string/title_activity_added_to_order"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".RestaurantActivity"
+            android:label="@string/title_activity_restaurant"
+            android:parentActivityName=".GimmeFoodActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.android.gimme.gimme.GimmeFoodActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -12,4 +12,47 @@
     tools:context="app.android.gimme.gimme.HomeScreenActivity"
     tools:showIn="@layout/app_bar_home_screen">
 
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageButton
+                    android:id="@+id/gimme_food"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gimme_food"
+                    android:layout_gravity="center"
+                    android:scaleX="1.57"
+                    android:scaleY="1.57"
+                    android:padding="50dp"
+                    android:onClick="onClick"/>
+                <ImageButton
+                    android:id="@+id/gimme_retail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gimme_retail"
+                    android:padding="50dp"
+                    android:scaleX="1"
+                    android:scaleY="1"
+                    android:layout_gravity="center"
+                    android:onClick="onClick"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
